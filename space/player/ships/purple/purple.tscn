@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://player/objects/AfterburnParticles purple.tscn" type="PackedScene" id=1]
+[ext_resource path="res://OBJ files/Low_Poly_Spaceship_002.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://player/ships/purple/purple.gd" type="Script" id=3]
+[ext_resource path="res://OBJ files/glowwhite.tres" type="Material" id=4]
+[ext_resource path="res://player/objects/crosshair037.png" type="Texture" id=5]
+[ext_resource path="res://player/objects/crosshair030.png" type="Texture" id=6]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1.33427, 0.123954, -3.30994, -7.87917, -0.901954, -0.297252, -7.87917, -0.776686, -0.297252, -1.23247, 0.63429, -3.30994, -1.23247, -0.386382, -3.30994, -7.87917, -0.901954, 0.123198, -0.944019, -0.818979, -3.30994, -0.510572, -1.10778, -3.30994, -0.549135, -1.20123, -3.23312, -0.00154209, -1.31038, -3.23312, -0.00154209, -1.72848, -2.13025, -0.00154209, -1.87429, -0.349808, -0.00154209, -1.8759, 0.942266, -7.87917, -0.776686, 0.123198, -1.98984, 2.15966, -2.09468, -2.05154, 2.09884, -2.09468, -1.01497, 1.13818, -3.23312, -0.944019, 1.06689, -3.30994, -2.29218, -1.56374, 1.75487, -0.541422, -1.1827, 3.63072, -0.293077, -0.583346, 4.45383, -0.541422, -0.417397, 4.45383, -0.708014, -0.168875, 4.45383, -0.00154209, 0.123954, 4.94948, -0.00154209, -1.20928, -3.30994, 0.547593, -1.20123, -3.23312, 7.87917, -0.901954, -0.297252, 7.87917, -0.901954, 0.123198, 2.29063, -1.56374, 1.75487, -0.00154209, -1.72405, 2.39767, -1.98984, 2.15966, -1.81491, -0.76663, 0.123954, 4.45383, -0.632431, 0.439742, 4.41583, -0.484349, 0.662083, 4.41583, -1.00109, 1.12408, 3.63072, -0.541422, 1.43061, 3.63072, -0.629346, 1.9917, 2.31277, -0.00154209, 1.55829, -3.23312, -0.549135, 1.44914, -3.23312, -0.00154209, 2.23901, 0.942266, -0.00154209, 2.23216, -0.349808, 1.9883, 2.15966, -2.09468, -0.510572, 1.35569, -3.30994, -0.00154209, -1.29024, 3.63072, -0.00154209, -0.641348, 4.45383, 0.630888, 0.439742, 4.41583, 0.482808, 0.662083, 4.41583, 0.260685, 0.81031, 4.41583, -0.00154209, 0.86227, 4.41583, -0.262227, 0.81031, 4.41583, 0.291536, -0.583346, 4.45383, 0.53988, -0.417397, 4.45383, 0.706472, -0.168875, 4.45383, 7.87917, -0.776686, 0.123198, 0.765088, 0.123954, 4.45383, 0.50903, -1.10778, -3.30994, 0.942477, -0.818979, -3.30994, 1.23093, -0.386382, -3.30994, 1.33273, 0.123954, -3.30994, 7.87917, -0.776686, -0.297252, 0.53988, -1.1827, 3.63072, -0.00154209, 2.12623, 2.31277, -0.00154209, 1.53815, 3.63072, -0.00154209, 1.45719, -3.30994, 0.547593, 1.44914, -3.23312, 1.9883, 2.15966, -1.81491, 2.05, 2.09884, -2.09468, 1.01343, 1.13818, -3.23312, 0.999549, 1.12408, 3.63072, 0.53988, 1.43061, 3.63072, 0.627803, 1.9917, 2.31277, 1.23093, 0.63429, -3.30994, 0.942477, 1.06689, -3.30994, 0.50903, 1.35569, -3.30994 )
+
+[node name="KinematicBody" type="KinematicBody"]
+script = ExtResource( 3 )
+
+[node name="body" type="MeshInstance" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="visual" type="Spatial" parent="."]
+
+[node name="m" parent="visual" instance=ExtResource( 1 )]
+transform = Transform( 1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0 )
+visibility_aabb = AABB( -1.49769, -1.75347, -2.87312, 2.99538, 3.50694, 5.74625 )
+
+[node name="l" parent="visual" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.29213, -0.825259, 0.580738 )
+visibility_aabb = AABB( -1.49769, -1.75347, -2.87312, 2.99538, 3.50694, 5.74625 )
+
+[node name="r" parent="visual" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.26207, -0.825259, 0.580738 )
+visibility_aabb = AABB( -1.49769, -1.75347, -2.87312, 2.99538, 3.50694, 5.74625 )
+
+[node name="gun0" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.721, 0, -3.897 )
+
+[node name="gun1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.721, 0, -3.897 )
+
+[node name="narrowrangeheat" type="Spatial" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -150 )
+
+[node name="Sprite3D" type="Sprite3D" parent="narrowrangeheat"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+texture = ExtResource( 5 )
+
+[node name="widerangeheat" type="Spatial" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -70 )
+
+[node name="Sprite3D" type="Sprite3D" parent="widerangeheat"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+texture = ExtResource( 6 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162511, 0, -6.46422 )
+enabled = true
+cast_to = Vector3( 0, 0, -200 )
+debug_shape_thickness = 5.0

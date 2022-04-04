@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Low_Poly_Spaceship_003.obj-b0de1d48e1cb39810c6d39efeba981fa.mesh"
+
+[deps]
+
+files=[ "res://.import/Low_Poly_Spaceship_003.obj-b0de1d48e1cb39810c6d39efeba981fa.mesh" ]
+
+source_file="res://OBJ files/Low_Poly_Spaceship_003.obj"
+dest_files=[ "res://.import/Low_Poly_Spaceship_003.obj-b0de1d48e1cb39810c6d39efeba981fa.mesh", "res://.import/Low_Poly_Spaceship_003.obj-b0de1d48e1cb39810c6d39efeba981fa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
